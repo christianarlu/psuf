@@ -38,7 +38,6 @@ body {
             justify-content: center;
 
         }
-
         div::after {
             content: "Life";
             color: rgb(108, 170, 15);
@@ -46,10 +45,19 @@ body {
             position: relative;
             top: 35px;
         }
-
         img.logo {
             height: 100%;
             width: auto;
+        }
+        figcaption {
+            color: white;
+            position: absolute;
+            bottom: 5px;
+            left: max(60px, 10vw);
+            a {
+                color: white;
+            }
+
         }
     }
 }
@@ -73,6 +81,7 @@ body {
                 justify-content: center;
     
             }
+    
     
         }
     }
