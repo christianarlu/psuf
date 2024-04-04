@@ -17,16 +17,21 @@
         </aside>
         <main class="main">
             <section class="top">
-                <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.</p>
-                <p>You <i>know</i> you want to</p>
+                <div>
+                    <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.</p>
+                    <br>
+                    <p>You <i>know</i> you want to</p>
+                </div>
             </section>
             <section class="mid">
-                <form action="https://httpbin.org/post" method="post">
-                    <h2>Let's do this!</h2>
-
+                
+                <form class="sign-up-form" id="form"  action="https://httpbin.org/post" method="post">
+                    
                     <div class="input-container">
                         <div>
+                            <h2>Let's do this!</h2>
                             <div>
+                                
                                 <label for="first-name">FIRST NAME</label>
                                 <input type="text" id="first-name" name="first-name">
                             </div>
@@ -51,15 +56,15 @@
                             </div>
                             <div>
                                 <label for="confirm-pwd">CONFIRM PASSWORD</label>
-                                <input type="pwd" id="confirm-pwd" name="confirm-pwd">
+                                <input type="password" id="confirm-pwd" name="confirm-pwd">
                             </div>
                         </div>
                     </div>
-
                 </form>
             </section>
             <section class="bottom">
-                <p>Already have an account? <a href="login.html">Log in</a></p>
+                <button form="form" type="submit">Create account</button>
+                <p>Already have an account? <a target="_blank" href="https://example.com/">Log in</a></p>
             </section>
         </main>
     </div>
