@@ -10,6 +10,9 @@ html {
     --grayishWhite: rgb(188, 185, 185);
     --midColor: #ebe6e6; 
     font-family: 'Arial Narrow', Arial, sans-serif;
+    a {
+        text-decoration: none;
+    }
 }
 
 body {
@@ -19,10 +22,7 @@ body {
     width: 100%;
 }
 
-a {
-    text-decoration: none;
-}
-
+/* input and label styles */
 label {
     font-size: clamp(10px,0.2vw,14px);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -32,13 +32,39 @@ label {
 
 input {
     border: 1.4px solid rgb(195, 188, 188);
-    width: 185px;
+    width: 200px;
+    appearance: none;
+    outline: none;
+    border-radius: 3px;
+    height: 20px;
+    padding: 5px 10px;
 }
 
-input:invalid {
-    border: 1.4px solid red;
+.validInput {
+    outline: 2px solid rgb(74, 204, 76);
 }
 
+input[class="invalidInput"] {
+    outline: 2px solid red;
+}
+
+.password-notif.invalidInput::after {
+    content: "* Passwords do not match";
+    font-size: 0.6rem;
+    color: red;
+    padding-top: 1px;
+}
+
+.emptyInput {
+    outline: none !important;
+    
+}
+
+input:focus {
+    outline: 2px solid rgb(92, 107, 204);
+}
+
+/* input and label  styles */
 
 div.container  {
     display: flex;
@@ -87,7 +113,7 @@ div.container  {
 
 
     .main {
-        width: 100%;
+        width: 65%;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -125,9 +151,10 @@ div.container  {
                 > div {
                     display: flex; 
                     flex-direction: column;
-                    gap: 16px;
+                    gap: 8px;
                     > div {
                         display: flex;
+                        gap: 2px;
                         flex-direction: column;
                     }
                 }
@@ -183,6 +210,9 @@ div.container  {
             }
     
     
+        }
+        .main {
+            width: 100%;
         }
     }
 }
